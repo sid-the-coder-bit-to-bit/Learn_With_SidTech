@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programming Courses Blog</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Programming Courses Blog</h1>
+    <p>Explore curated programming courses for all levels</p>
+  </header>
+
+  <section class="courses">
+    {% for course in courses %}
+    <div class="course-card">
+      <h2>{{ course.title }}</h2>
+      <p>{{ course.description }}</p>
+      <span class="level level-{{ course.level | lower }}">{{ course.level }}</span>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section class="contact-form">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="flash">{{ messages[0] }}</div>
+      {% endif %}
+    {% endwith %}
+    <form action="/contact" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</body>
+</html>

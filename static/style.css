@@ -1,0 +1,66 @@
+body {
+  font-family: sans-serif;
+  padding: 2rem;
+  background-color: #f9fafb;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.course-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.level {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.level-beginner {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.level-intermediate {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.level-advanced {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.contact-form {
+  margin-top: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.flash {
+  color: green;
+  margin-bottom: 1rem;
+}
